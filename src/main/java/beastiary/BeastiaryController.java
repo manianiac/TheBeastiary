@@ -35,6 +35,11 @@ public class BeastiaryController {
         return new ModelAndView("List");
     }
     
+    @RequestMapping(value="/createMonster")
+    public ModelAndView beastiaryCreateMonster(HttpServletRequest request) {
+    	return new ModelAndView("createMonster");
+    }
+    
     @RequestMapping(value="/monster")
     public ModelAndView beastiaryMonster(HttpServletRequest request) {
         return new ModelAndView("Monster");
@@ -43,5 +48,11 @@ public class BeastiaryController {
     public ModelAndView beastiaryUser(HttpServletRequest request) {
     	String name = request.getParameter("name");
         return new ModelAndView("User");
+    }
+    
+    @RequestMapping(value="/createUser")
+    public ModelAndView beastiaryCreateUser(HttpServletRequest request) {
+    	String name = request.getParameter("name");
+        return new ModelAndView("createUser");
     }
 }

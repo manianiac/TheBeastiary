@@ -1,9 +1,10 @@
 <html>
    <head>
-      <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
-      <link rel="stylesheet" type="text/css" href="css/cardUI.css" />
-      <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui.theme.min.css" />
-      <script src="js/jquery.js"></script>
+      <link rel="stylesheet" type="text/css" href="resources/css/jquery.mobile.flatui.css" />
+      <link rel="stylesheet" type="text/css" href="resources/css/cardUI.css" />
+      <link rel="stylesheet" type="text/css" href="resources/css/smoothness/jquery-ui.theme.min.css" />
+      <script src="resources/js/jquery.js"></script>
+      <script src="resources/js/jquery-ui.js"></script>
       <script>
          $(document).bind('mobileinit', function() {
              $.mobile.changePage.defaults.changeHash = false;
@@ -11,10 +12,19 @@
              $.mobile.pushStateEnabled = false;
          });
       </script>
-      <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+      <script src="resources/js/jquery.mobile-1.4.0-rc.1.js"></script>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <script>
+      	$(function() {
+      		$("#newAbility").button({
+      			icons: {primary: "ui-icon-plusthick"}
+      		});
+    	  });
+      </script>
+      
    </head>
    
    
@@ -50,7 +60,7 @@
 					<form>
 						Ability Name: <input type="text" name="ability1Name"><br>
 						Ability Desription: <input type="text" name="ability1Description"><br>
-						Add New Ability +<br>
+						<a href="#" id="newAbility">Add New Ability</a><br>
 					</form>
 			</div>
 			<div class="card" id="Actions">
