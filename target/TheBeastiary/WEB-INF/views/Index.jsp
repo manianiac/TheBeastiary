@@ -9,6 +9,11 @@
 				$.mobile.hashListeningEnabled = false;
 				$.mobile.pushStateEnabled = false;
 			});
+			
+			$(document).ready(function() {
+				$("#mainframe").height($(window).height()*0.92);
+			});
+			
 		</script>
 		<script src="resources/js/jquery.mobile-1.4.0-rc.1.js"></script>
 		
@@ -32,9 +37,9 @@
 				<h1>The Beastiary</h1>
 				<a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu" class="ui-btn-right"></a>
 			</div>
-			<div data-role="content" role="main">
+			<div data-role="content" role="main" id="mainframe-holder">
 			<!--This iframe will be filled with a jsp to populate the list -->
-				<iframe id="mainframe" src="/monsterList" width="100%" height="95%">
+				<iframe id="mainframe" src="/monsterList" width="100%">
 			</div>
 		</div>
 	</body>
